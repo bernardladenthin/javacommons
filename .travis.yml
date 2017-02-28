@@ -1,0 +1,24 @@
+language: java
+install: mvn install -Dgpg.skip=true
+jdk:
+- oraclejdk8
+- openjdk8
+
+env:
+  global:
+   # The next declaration is the encrypted COVERITY_SCAN_TOKEN, created
+   #   via the "travis encrypt" command using the project repo's public key
+   - secure: "e6GOfUSvqOi5PT7XrzeUpOeqE44Uffc4o7vZ4qwnrGjRc9g3LcZk9CV4bXU87u+SDfAbCpt36beLfsU/ZajSkHMQcgcJQnF5uh++WxflejAz2fo6a3cmsTYQSv98LxHcOjIQZdyOuJLhXibMlXFhvRx6uYsolym0VE4oPXMXtiGMT6gGUDyH9/Qan7jGKROQ+05voJ8jPPXcDOsTEuBQdMxROC2c3+XOtm+DSMHZtbPXPi2pl9BorbzULxMoaDiy+zrjbCNMsdLcU4x1S4I9iOXMEhxQKGkNWLCvhustiaByIqjNLYQBH4wNoqyGbjZRcF4beiHm2CaRNhiX3OHZjRh7KRoreGmcMA4gdM2TqxvIEqOBU/b4cqCyqeA7KUN670qh3vMIplOwLI+tz+6MwyPn5zFmfI2Dd4m+GVr4EmpJB3V3h8O3Oe8bvPdafLPbUPX3KanwyWl3a0CDBSJmWW+92WGeKDT8XOe4i2QZpnAY7+SzOOVkDx3Z4HfuWCW/uC3DQDIZjaPqIWcmRk8BJUVd6qQxLNEoDMaRoOECNCoYX41lzbKmwUnimMSOvo2kDO/sDr8Omgyjhwdv+ZkhEVE2cZmRv4qb69cJ59QcTNIJZdAiFmWacRVOjgxVkDED7h5XMgMBXmj4jNnhFLeuANGXvzboQ7WOsSJk+pqYzwM="
+
+before_install:
+      - echo -n | openssl s_client -connect scan.coverity.com:443 | sed -ne '/-BEGIN CERTIFICATE-/,/-END CERTIFICATE-/p' | sudo tee -a /etc/ssl/certs/ca-
+
+addons:
+  coverity_scan:
+    project:
+      name: "bernardladenthin/javacommons"
+      description: "Build submitted via Travis CI"
+    notification_email: bernard.ladenthin@gmail.com
+    build_command_prepend: "mvn clean"
+    build_command:   "mvn -DskipTests=true compile"
+    branch_pattern: coverity_scan
