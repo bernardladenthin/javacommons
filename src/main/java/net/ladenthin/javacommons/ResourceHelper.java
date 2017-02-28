@@ -23,6 +23,8 @@ import java.net.URISyntaxException;
 import java.net.URL;
 
 /**
+ * Helps for some resource operations.
+ * All methods are thread safe.
  *
  * @author Bernard Ladenthin bernard.ladenthin@gmail.com
  */

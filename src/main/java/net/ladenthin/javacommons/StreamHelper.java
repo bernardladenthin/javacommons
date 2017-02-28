@@ -22,7 +22,7 @@ import java.io.*;
 import java.nio.charset.StandardCharsets;
 
 /**
- * This class helps to read a stream and convert them to an string.
+ * Helps to read a stream and convert them to an string.
  * All methods are thread safe.
  *
  * @author Bernard Ladenthin bernard.ladenthin@gmail.com
