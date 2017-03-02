@@ -28,6 +28,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * Test the class {@link StringCollectionToPrimitiveArray}.
+ *
  * @author Bernard Ladenthin bernard.ladenthin@gmail.com
  */
 public class StringCollectionToPrimitiveArrayTest {
@@ -43,7 +44,7 @@ public class StringCollectionToPrimitiveArrayTest {
                 () -> assertNotNull(cut.stringCollectionToStringArray(null)),
                 () -> assertEquals(0, cut.stringCollectionToStringArray(null).length),
                 () -> assertArrayEquals(new String[]{}, cut.stringCollectionToStringArray(Arrays.asList())),
-                () -> assertArrayEquals(new String[]{null}, cut.stringCollectionToStringArray(Arrays.asList((String)null))),
+                () -> assertArrayEquals(new String[]{null}, cut.stringCollectionToStringArray(Arrays.asList((String) null))),
                 () -> assertArrayEquals(new String[]{"One"}, cut.stringCollectionToStringArray(Arrays.asList("One"))),
                 () -> assertArrayEquals(new String[]{"One", "Two"}, cut.stringCollectionToStringArray(Arrays.asList("One", "Two"))),
                 () -> assertArrayEquals(new String[]{"One", "Two", "Three"}, cut.stringCollectionToStringArray(Arrays.asList("One", "Two", "Three")))
@@ -56,16 +57,16 @@ public class StringCollectionToPrimitiveArrayTest {
                 () -> assertNotNull(cut.stringCollectionToByteArray(null)),
                 () -> assertEquals(0, cut.stringCollectionToByteArray(null).length),
                 () -> assertArrayEquals(new byte[]{}, cut.stringCollectionToByteArray(Arrays.asList())),
-                () -> assertArrayEquals(new byte[]{(byte)0}, cut.stringCollectionToByteArray(Arrays.asList("0"))),
-                () -> assertArrayEquals(new byte[]{(byte)0, (byte)1}, cut.stringCollectionToByteArray(Arrays.asList("0", "1"))),
-                () -> assertArrayEquals(new byte[]{(byte)0, (byte)1, (byte)2}, cut.stringCollectionToByteArray(Arrays.asList("0", "1", "2")))
+                () -> assertArrayEquals(new byte[]{(byte) 0}, cut.stringCollectionToByteArray(Arrays.asList("0"))),
+                () -> assertArrayEquals(new byte[]{(byte) 0, (byte) 1}, cut.stringCollectionToByteArray(Arrays.asList("0", "1"))),
+                () -> assertArrayEquals(new byte[]{(byte) 0, (byte) 1, (byte) 2}, cut.stringCollectionToByteArray(Arrays.asList("0", "1", "2")))
         );
     }
 
     @Test
     void stringCollectionToByteArray_wrongUsage() throws IOException {
         assertThrows(NumberFormatException.class, () -> {
-            cut.stringCollectionToByteArray(Arrays.asList((String)null));
+            cut.stringCollectionToByteArray(Arrays.asList((String) null));
         });
     }
 
@@ -75,16 +76,16 @@ public class StringCollectionToPrimitiveArrayTest {
                 () -> assertNotNull(cut.stringCollectionToShortArray(null)),
                 () -> assertEquals(0, cut.stringCollectionToShortArray(null).length),
                 () -> assertArrayEquals(new short[]{}, cut.stringCollectionToShortArray(Arrays.asList())),
-                () -> assertArrayEquals(new short[]{(short)0}, cut.stringCollectionToShortArray(Arrays.asList("0"))),
-                () -> assertArrayEquals(new short[]{(short)0, (short)1}, cut.stringCollectionToShortArray(Arrays.asList("0", "1"))),
-                () -> assertArrayEquals(new short[]{(short)0, (short)1, (short)2}, cut.stringCollectionToShortArray(Arrays.asList("0", "1", "2")))
+                () -> assertArrayEquals(new short[]{(short) 0}, cut.stringCollectionToShortArray(Arrays.asList("0"))),
+                () -> assertArrayEquals(new short[]{(short) 0, (short) 1}, cut.stringCollectionToShortArray(Arrays.asList("0", "1"))),
+                () -> assertArrayEquals(new short[]{(short) 0, (short) 1, (short) 2}, cut.stringCollectionToShortArray(Arrays.asList("0", "1", "2")))
         );
     }
 
     @Test
     void stringCollectionToShortArray_wrongUsage() throws IOException {
         assertThrows(NumberFormatException.class, () -> {
-            cut.stringCollectionToShortArray(Arrays.asList((String)null));
+            cut.stringCollectionToShortArray(Arrays.asList((String) null));
         });
     }
 
@@ -103,7 +104,7 @@ public class StringCollectionToPrimitiveArrayTest {
     @Test
     void stringCollectionToIntArray_wrongUsage() throws IOException {
         assertThrows(NumberFormatException.class, () -> {
-            cut.stringCollectionToIntArray(Arrays.asList((String)null));
+            cut.stringCollectionToIntArray(Arrays.asList((String) null));
         });
     }
 
@@ -122,7 +123,7 @@ public class StringCollectionToPrimitiveArrayTest {
     @Test
     void stringCollectionToLongArray_wrongUsage() throws IOException {
         assertThrows(NumberFormatException.class, () -> {
-            cut.stringCollectionToLongArray(Arrays.asList((String)null));
+            cut.stringCollectionToLongArray(Arrays.asList((String) null));
         });
     }
 
@@ -141,7 +142,7 @@ public class StringCollectionToPrimitiveArrayTest {
     @Test
     void stringCollectionToFloatArray_wrongUsage() throws IOException {
         assertThrows(NullPointerException.class, () -> {
-            cut.stringCollectionToFloatArray(Arrays.asList((String)null));
+            cut.stringCollectionToFloatArray(Arrays.asList((String) null));
         });
     }
 
@@ -151,7 +152,7 @@ public class StringCollectionToPrimitiveArrayTest {
                 () -> assertNotNull(cut.stringCollectionToBooleanArray(null)),
                 () -> assertEquals(0, cut.stringCollectionToBooleanArray(null).length),
                 () -> assertArrayEquals(new boolean[]{}, cut.stringCollectionToBooleanArray(Arrays.asList())),
-                () -> assertArrayEquals(new boolean[]{false}, cut.stringCollectionToBooleanArray(Arrays.asList((String)null))),
+                () -> assertArrayEquals(new boolean[]{false}, cut.stringCollectionToBooleanArray(Arrays.asList((String) null))),
                 () -> assertArrayEquals(new boolean[]{false}, cut.stringCollectionToBooleanArray(Arrays.asList("false"))),
                 () -> assertArrayEquals(new boolean[]{false, true}, cut.stringCollectionToBooleanArray(Arrays.asList("false", "true"))),
                 () -> assertArrayEquals(new boolean[]{false, true, false}, cut.stringCollectionToBooleanArray(Arrays.asList("false", "true", "false")))
@@ -173,7 +174,7 @@ public class StringCollectionToPrimitiveArrayTest {
     @Test
     void stringCollectionToDoubleArray_wrongUsage() throws IOException {
         assertThrows(NullPointerException.class, () -> {
-            cut.stringCollectionToDoubleArray(Arrays.asList((String)null));
+            cut.stringCollectionToDoubleArray(Arrays.asList((String) null));
         });
     }
 
@@ -195,7 +196,7 @@ public class StringCollectionToPrimitiveArrayTest {
     @Test
     void stringCollectionToCharArray_wrongUsage() throws IOException {
         assertThrows(NullPointerException.class, () -> {
-            cut.stringCollectionToCharArray(Arrays.asList((String)null));
+            cut.stringCollectionToCharArray(Arrays.asList((String) null));
         });
     }
 }

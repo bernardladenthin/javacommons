@@ -31,8 +31,9 @@ import java.net.URL;
 public class ResourceHelper {
     /**
      * Get a resource as a file.
+     *
      * @param clazz the class where the resource is requested
-     * @param name name of the desired resource
+     * @param name  name of the desired resource
      * @return the file
      */
     public File getResourceAsFile(FileHelper fileHelper, Class clazz, String name) throws URISyntaxException {

@@ -59,8 +59,8 @@ public class StreamHelper {
     }
 
     public String readFullyAsString(File file, String encoding) throws IOException {
-        try (FileInputStream fileInputStream = new FileInputStream( file )) {
-            String content = readFullyAsString( fileInputStream, encoding );
+        try (FileInputStream fileInputStream = new FileInputStream(file)) {
+            String content = readFullyAsString(fileInputStream, encoding);
             return content;
         }
     }

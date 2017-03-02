@@ -77,11 +77,12 @@ public class StringCollectionToPrimitiveArray {
      * Convert a {@link String} {@link Collection} to a {@link String} array.
      * No further converts.
      * <code>null</code> values in the collection are allowed and will be <code>null</code> values in the array.
+     *
      * @param strings The {@link String}s. Can be <code>null</code>.
      * @return The {@link String} array. Never be <code>null</code>, may be empty.
      */
     public String[] stringCollectionToStringArray(Collection<String> strings) {
-        if(strings == null || strings.size() == 0) {
+        if (strings == null || strings.size() == 0) {
             return EMPTY_ARRAY_STRING;
         }
         return strings.toArray(new String[strings.size()]);
@@ -91,11 +92,12 @@ public class StringCollectionToPrimitiveArray {
      * Convert a {@link String} {@link Collection} containing bytes to a {@link String} array.
      * Convert all entries using {@link Byte#parseByte(String)}.
      * <code>null</code> values in the collection are not allowed and throw a {@link NumberFormatException}.
+     *
      * @param strings The {@link String}s. Can be <code>null</code>.
      * @return The byte array. Never be <code>null</code>, may be empty.
      */
     public byte[] stringCollectionToByteArray(Collection<String> strings) {
-        if(strings == null || strings.size() == 0) {
+        if (strings == null || strings.size() == 0) {
             return EMPTY_ARRAY_BYTE;
         }
         byte[] ret = new byte[strings.size()];
@@ -110,11 +112,12 @@ public class StringCollectionToPrimitiveArray {
      * Convert a {@link String} {@link Collection} containing shorts to a {@link String} array.
      * Convert all entries using {@link Short#parseShort(String)}.
      * <code>null</code> values in the collection are not allowed and throw a {@link NumberFormatException}.
+     *
      * @param strings The {@link String}s. Can be <code>null</code>.
      * @return The short array. Never be <code>null</code>, may be empty.
      */
     public short[] stringCollectionToShortArray(Collection<String> strings) {
-        if(strings == null || strings.size() == 0) {
+        if (strings == null || strings.size() == 0) {
             return EMPTY_ARRAY_SHORT;
         }
         short[] ret = new short[strings.size()];
@@ -129,11 +132,12 @@ public class StringCollectionToPrimitiveArray {
      * Convert a {@link String} {@link Collection} containing ints to a {@link String} array.
      * Convert all entries using {@link Integer#parseInt(String)}.
      * <code>null</code> values in the collection are not allowed and throw a {@link NumberFormatException}.
+     *
      * @param strings The {@link String}s. Can be <code>null</code>.
      * @return The int array. Never be <code>null</code>, may be empty.
      */
     public int[] stringCollectionToIntArray(Collection<String> strings) {
-        if(strings == null || strings.size() == 0) {
+        if (strings == null || strings.size() == 0) {
             return EMPTY_ARRAY_INT;
         }
         int[] ret = new int[strings.size()];
@@ -148,11 +152,12 @@ public class StringCollectionToPrimitiveArray {
      * Convert a {@link String} {@link Collection} containing longs to a {@link String} array.
      * Convert all entries using {@link Long#parseLong(String)}.
      * <code>null</code> values in the collection are not allowed and throw a {@link NumberFormatException}.
+     *
      * @param strings The {@link String}s. Can be <code>null</code>.
      * @return The long array. Never be <code>null</code>, may be empty.
      */
     public long[] stringCollectionToLongArray(Collection<String> strings) {
-        if(strings == null || strings.size() == 0) {
+        if (strings == null || strings.size() == 0) {
             return EMPTY_ARRAY_LONG;
         }
         long[] ret = new long[strings.size()];
@@ -167,11 +172,12 @@ public class StringCollectionToPrimitiveArray {
      * Convert a {@link String} {@link Collection} containing floats to a {@link String} array.
      * Convert all entries using {@link Float#parseFloat(String)}.
      * <code>null</code> values in the collection are not allowed and throw a {@link NullPointerException}.
+     *
      * @param strings The {@link String}s. Can be <code>null</code>.
      * @return The float array. Never be <code>null</code>, may be empty.
      */
     public float[] stringCollectionToFloatArray(Collection<String> strings) {
-        if(strings == null || strings.size() == 0) {
+        if (strings == null || strings.size() == 0) {
             return EMPTY_ARRAY_FLOAT;
         }
         float[] ret = new float[strings.size()];
@@ -186,11 +192,12 @@ public class StringCollectionToPrimitiveArray {
      * Convert a {@link String} {@link Collection} containing doubles to a {@link String} array.
      * Convert all entries using {@link Double#parseDouble(String)}.
      * <code>null</code> values in the collection are not allowed and throw a {@link NullPointerException}.
+     *
      * @param strings The {@link String}s. Can be <code>null</code>.
      * @return The double array. Never be <code>null</code>, may be empty.
      */
     public double[] stringCollectionToDoubleArray(Collection<String> strings) {
-        if(strings == null || strings.size() == 0) {
+        if (strings == null || strings.size() == 0) {
             return EMPTY_ARRAY_DOUBLE;
         }
         double[] ret = new double[strings.size()];
@@ -205,11 +212,12 @@ public class StringCollectionToPrimitiveArray {
      * Convert a {@link String} {@link Collection} containing booleans to a {@link String} array.
      * Convert all entries using {@link Boolean#parseBoolean(String)}.
      * <code>null</code> values in the collection are allowed and will be converted to a <code>false</code> value.
+     *
      * @param strings The {@link String}s. Can be <code>null</code>.
      * @return The boolean array. Never be <code>null</code>, may be empty.
      */
     public boolean[] stringCollectionToBooleanArray(Collection<String> strings) {
-        if(strings == null || strings.size() == 0) {
+        if (strings == null || strings.size() == 0) {
             return EMPTY_ARRAY_BOOLEAN;
         }
         boolean[] ret = new boolean[strings.size()];
@@ -224,11 +232,12 @@ public class StringCollectionToPrimitiveArray {
      * Convert a {@link String} {@link Collection} containing chars to a {@link String} array.
      * Convert all entries using {@link String#charAt(int)}.
      * <code>null</code> values in the collection are not allowed and throw a {@link NullPointerException}.
+     *
      * @param strings The {@link String}s. Can be <code>null</code>.
      * @return The char array. Never be <code>null</code>, may be empty.
      */
     public char[] stringCollectionToCharArray(Collection<String> strings) {
-        if(strings == null || strings.size() == 0) {
+        if (strings == null || strings.size() == 0) {
             return EMPTY_ARRAY_CHAR;
         }
         char[] ret = new char[strings.size()];

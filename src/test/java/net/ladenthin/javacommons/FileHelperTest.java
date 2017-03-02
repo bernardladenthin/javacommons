@@ -31,6 +31,7 @@ import java.net.URISyntaxException;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
+ * Test the class {@link FileHelper}.
  *
  * @author Bernard Ladenthin bernard.ladenthin@gmail.com
  */
