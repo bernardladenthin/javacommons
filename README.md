@@ -1,6 +1,7 @@
 [![Travis build status](https://travis-ci.org/bernardladenthin/javacommons.svg)](https://travis-ci.org/bernardladenthin/javacommons)
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/net.ladenthin/javacommons/badge.svg)](https://maven-badges.herokuapp.com/maven-central/net.ladenthin/javacommons)
 [![Coverage Status](https://coveralls.io/repos/bernardladenthin/javacommons/badge.svg)](https://coveralls.io/r/bernardladenthin/javacommons)
+[![Codecov](https://codecov.io/github/bernardladenthin/javacommons/coverage.png)](https://codecov.io/gh/bernardladenthin/javacommons)
 [![Coverity Scan Build Status](https://scan.coverity.com/projects/11902/badge.svg)](https://scan.coverity.com/projects/11902)
 [![License](http://img.shields.io/:license-apache-blue.svg)](http://www.apache.org/licenses/LICENSE-2.0.html)
 [![Dependency Status](https://www.versioneye.com/user/projects/TODO/badge.svg?style=flat)](https://www.versioneye.com/user/projects/TODO)
