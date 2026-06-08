@@ -29,7 +29,7 @@ Several helpers in this library only wrapped functionality that the JDK has
 since provided directly. Those methods have been removed; use the standard
 library instead.
 
-### `StreamHelper` (all read-fully methods removed)
+### `StreamHelper` (class removed)
 
 | Removed method | Modern replacement | Since |
 |---|---|---|
@@ -41,8 +41,7 @@ library instead.
 | `readFullyAsUTF8String(File)` | `Files.readString(file.toPath())` (UTF-8 default) | Java 11 |
 
 Prefer passing a `java.nio.charset.Charset` (e.g. `StandardCharsets.UTF_8`)
-rather than a charset name `String`. The `StreamHelper.BUFFER_SIZE` and
-`StreamHelper.UTF8` constants are retained.
+rather than a charset name `String`.
 
 ### `FileHelper` (class removed)
 
@@ -57,7 +56,7 @@ rather than a charset name `String`. The `StreamHelper.BUFFER_SIZE` and
 |---|---|
 | `getResourceAsFile(...)` | `clazz.getResourceAsStream(name).readAllBytes()` (Java 9+). Resolving a classpath resource to a `File` fails inside a JAR; open a zip `FileSystem` if a `Path` is genuinely required. |
 
-### `StringCollectionToPrimitiveArray` (all conversion methods removed)
+### `StringCollectionToPrimitiveArray` (class removed)
 
 | Removed method | Modern replacement |
 |---|---|
@@ -68,7 +67,7 @@ rather than a charset name `String`. The `StreamHelper.BUFFER_SIZE` and
 | `stringCollectionToByteArray` / `...ShortArray` / `...FloatArray` / `...BooleanArray` | no primitive stream exists; map via the Stream API to the boxed type (`Byte[]`, `Short[]`, `Float[]`, `Boolean[]`) and unbox, or keep an explicit loop |
 | `stringCollectionToCharArray` | explicit loop; if every element is a single character, `String.join("", strings).toCharArray()` |
 
-The `EMPTY_ARRAY_*` constants are retained.
+For empty arrays, use `new int[0]` (etc.) directly.
 
 ##License
 Code is under the [Apache Licence v2](https://www.apache.org/licenses/LICENSE-2.0.txt).
