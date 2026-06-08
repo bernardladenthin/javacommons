@@ -32,10 +32,17 @@ public class ResourceHelper {
     /**
      * Get a resource as a file.
      *
+     * @param fileHelper helper used to convert the resource URL to a file
      * @param clazz the class where the resource is requested
      * @param name  name of the desired resource
      * @return the file
+     * @throws URISyntaxException if the resource URL cannot be converted to a URI
+     * @deprecated Resolving a classpath resource to a {@link File} fails when the
+     *             resource lives inside a JAR. Prefer reading the stream directly via
+     *             {@code clazz.getResourceAsStream(name).readAllBytes()} (Java&nbsp;9+),
+     *             or open a zip {@code FileSystem} when a path is genuinely required.
      */
+    @Deprecated
     public File getResourceAsFile(FileHelper fileHelper, Class clazz, String name) throws URISyntaxException {
         URL url = clazz.getResource(name);
         return fileHelper.urlToFile(url);

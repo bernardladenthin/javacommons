@@ -80,7 +80,10 @@ public class StringCollectionToPrimitiveArray {
      *
      * @param strings The {@link String}s. Can be <code>null</code>.
      * @return The {@link String} array. Never be <code>null</code>, may be empty.
+     * @deprecated Use {@code strings.toArray(String[]::new)} (Java&nbsp;8+); guard
+     *             for a {@code null} collection separately.
      */
+    @Deprecated
     public String[] stringCollectionToStringArray(Collection<String> strings) {
         if (strings == null || strings.size() == 0) {
             return EMPTY_ARRAY_STRING;
@@ -95,7 +98,10 @@ public class StringCollectionToPrimitiveArray {
      *
      * @param strings The {@link String}s. Can be <code>null</code>.
      * @return The byte array. Never be <code>null</code>, may be empty.
+     * @deprecated The JDK has no {@code ByteStream}; keep an explicit loop, or map
+     *             via the Stream API to {@code Byte[]} and unbox.
      */
+    @Deprecated
     public byte[] stringCollectionToByteArray(Collection<String> strings) {
         if (strings == null || strings.size() == 0) {
             return EMPTY_ARRAY_BYTE;
@@ -115,7 +121,10 @@ public class StringCollectionToPrimitiveArray {
      *
      * @param strings The {@link String}s. Can be <code>null</code>.
      * @return The short array. Never be <code>null</code>, may be empty.
+     * @deprecated The JDK has no {@code ShortStream}; keep an explicit loop, or map
+     *             via the Stream API to {@code Short[]} and unbox.
      */
+    @Deprecated
     public short[] stringCollectionToShortArray(Collection<String> strings) {
         if (strings == null || strings.size() == 0) {
             return EMPTY_ARRAY_SHORT;
@@ -135,7 +144,10 @@ public class StringCollectionToPrimitiveArray {
      *
      * @param strings The {@link String}s. Can be <code>null</code>.
      * @return The int array. Never be <code>null</code>, may be empty.
+     * @deprecated Use {@code strings.stream().mapToInt(Integer::parseInt).toArray()}
+     *             (Java&nbsp;8+).
      */
+    @Deprecated
     public int[] stringCollectionToIntArray(Collection<String> strings) {
         if (strings == null || strings.size() == 0) {
             return EMPTY_ARRAY_INT;
@@ -155,7 +167,10 @@ public class StringCollectionToPrimitiveArray {
      *
      * @param strings The {@link String}s. Can be <code>null</code>.
      * @return The long array. Never be <code>null</code>, may be empty.
+     * @deprecated Use {@code strings.stream().mapToLong(Long::parseLong).toArray()}
+     *             (Java&nbsp;8+).
      */
+    @Deprecated
     public long[] stringCollectionToLongArray(Collection<String> strings) {
         if (strings == null || strings.size() == 0) {
             return EMPTY_ARRAY_LONG;
@@ -175,7 +190,10 @@ public class StringCollectionToPrimitiveArray {
      *
      * @param strings The {@link String}s. Can be <code>null</code>.
      * @return The float array. Never be <code>null</code>, may be empty.
+     * @deprecated The JDK has no {@code FloatStream}; keep an explicit loop, or map
+     *             via the Stream API to {@code Float[]} and unbox.
      */
+    @Deprecated
     public float[] stringCollectionToFloatArray(Collection<String> strings) {
         if (strings == null || strings.size() == 0) {
             return EMPTY_ARRAY_FLOAT;
@@ -195,7 +213,10 @@ public class StringCollectionToPrimitiveArray {
      *
      * @param strings The {@link String}s. Can be <code>null</code>.
      * @return The double array. Never be <code>null</code>, may be empty.
+     * @deprecated Use {@code strings.stream().mapToDouble(Double::parseDouble).toArray()}
+     *             (Java&nbsp;8+).
      */
+    @Deprecated
     public double[] stringCollectionToDoubleArray(Collection<String> strings) {
         if (strings == null || strings.size() == 0) {
             return EMPTY_ARRAY_DOUBLE;
@@ -215,7 +236,10 @@ public class StringCollectionToPrimitiveArray {
      *
      * @param strings The {@link String}s. Can be <code>null</code>.
      * @return The boolean array. Never be <code>null</code>, may be empty.
+     * @deprecated The JDK has no {@code BooleanStream}; keep an explicit loop, or map
+     *             via the Stream API to {@code Boolean[]} and unbox.
      */
+    @Deprecated
     public boolean[] stringCollectionToBooleanArray(Collection<String> strings) {
         if (strings == null || strings.size() == 0) {
             return EMPTY_ARRAY_BOOLEAN;
@@ -235,7 +259,10 @@ public class StringCollectionToPrimitiveArray {
      *
      * @param strings The {@link String}s. Can be <code>null</code>.
      * @return The char array. Never be <code>null</code>, may be empty.
+     * @deprecated The JDK has no {@code CharStream}; keep an explicit loop. If every
+     *             element is a single character, {@code String.join("", strings).toCharArray()}.
      */
+    @Deprecated
     public char[] stringCollectionToCharArray(Collection<String> strings) {
         if (strings == null || strings.size() == 0) {
             return EMPTY_ARRAY_CHAR;

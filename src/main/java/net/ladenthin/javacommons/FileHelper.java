@@ -31,10 +31,32 @@ import java.net.URL;
  */
 public class FileHelper {
 
+    /**
+     * Converts a {@link File} to a {@link URL}.
+     *
+     * @param file the file to convert
+     * @return the URL representation of the file
+     * @throws MalformedURLException if the file cannot be converted to a URL
+     * @deprecated This one-line wrapper adds nothing over the JDK call. Use
+     *             {@code file.toURI().toURL()} directly, or stay in NIO with
+     *             {@code path.toUri().toURL()}.
+     */
+    @Deprecated
     public URL fileToUrl(File file) throws MalformedURLException {
         return file.toURI().toURL();
     }
 
+    /**
+     * Converts a {@link URL} to a {@link File}.
+     *
+     * @param url the URL to convert
+     * @return the file representation of the URL
+     * @throws URISyntaxException if the URL is not formatted strictly according to RFC&nbsp;2396
+     * @deprecated This one-line wrapper adds nothing over the JDK call. Use
+     *             {@code new File(url.toURI())} directly, or in NIO
+     *             {@code Paths.get(url.toURI())}.
+     */
+    @Deprecated
     public File urlToFile(URL url) throws URISyntaxException {
         return new File(url.toURI());
     }
