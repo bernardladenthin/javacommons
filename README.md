@@ -23,5 +23,11 @@ You can pull it from the central Maven repositories:
 </dependency>
 ```
 
+##Removed helpers and their modern Java replacements
+
+Several helpers that only wrapped functionality the JDK now provides directly
+have been removed. See [docs/1.0.0-removal.md](docs/1.0.0-removal.md) for the
+full list of removed classes/methods and their standard-library replacements.
+
 ##License
 Code is under the [Apache Licence v2](https://www.apache.org/licenses/LICENSE-2.0.txt).
